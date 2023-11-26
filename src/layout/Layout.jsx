@@ -104,7 +104,10 @@ const Layout = () => {
             </Navbar.Toggle>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto justify-content-center">
-                <Nav.Link as={NavLink} to="/allRecipes" id="firstLink">
+              <Nav.Link as={NavLink} to="/" id="firstLink">
+                 Home
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/allRecipes">
                   All Recipes
                 </Nav.Link>
                 <Nav.Link as={NavLink} to="/cakes">

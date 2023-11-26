@@ -4,3 +4,25 @@
     margin-right: 30px;
     box-sizing: border-box;
 }
+#home_welcome{
+    font-size: 28px;
+    line-height: 1.2;
+    color: #444;
+    font-weight: 300;
+}
+
+.homePageContent p{
+    font-weight: 300;
+    color: #333;
+    font-size: 17px;
+    line-height: 1.625;
+    text-align: justify;
+}
+
+#sweetMiMi {
+ color: black;
+}
+
+.home_bold_text, #home_bold{
+    font-weight: bolder;
+}
