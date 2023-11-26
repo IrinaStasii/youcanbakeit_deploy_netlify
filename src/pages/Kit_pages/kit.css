@@ -86,13 +86,16 @@
   text-align: center;
 }
 
-
-#notAvailableKit a:hover{
-  color:  #55c6e4;
+#notAvailableKitLink:hover {
+  background-color: transparent; 
+  text-decoration: underline;
 }
 
-#notAvailableKit a{
-  color: #4494ab;
+#notAvailableKitLink{
+color:#3c8a9f;
+text-transform:none;
+display: inline;
+/* padding-left: 5px; */
 }
 
 #christmasKit {

@@ -105,18 +105,23 @@ const Layout = () => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto justify-content-center">
                 <Nav.Link as={NavLink} to="/allRecipes" id="firstLink">
-                All Recipes
-                </Nav.Link>
-                {/* <Nav.Link href="/allRecipes" id="firstLink">
                   All Recipes
-                </Nav.Link> */}
-                <Nav.Link as={NavLink} to="/cakes">Cakes</Nav.Link>
-                {/* <Link to="/kit"> Resume </Link> */}
-                <Nav.Link as={NavLink} to="/cookies">Cookies</Nav.Link>
-                <Nav.Link as={NavLink} to="/kit">Kit</Nav.Link>
-                <Nav.Link as={NavLink} to="/about">About</Nav.Link>
-                <Nav.Link as={NavLink} to="/contact">Contact</Nav.Link>
-                {/* <Nav.Link href="/termsofuse"></Nav.Link> */}
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/cakes">
+                  Cakes
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/cookies">
+                  Cookies
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/kit">
+                  Kit
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/about">
+                  About
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/contact">
+                  Contact
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -134,9 +139,9 @@ const Layout = () => {
                 Irina, a coffee lover passionate about baking, creating
                 beautiful designs, food photography and crafting delicious
                 treats.{" "}
-                <a href="/about" id="readMore">
+                <Link to={"/about"} id="readMore">
                   Read more...{" "}
-                </a>
+                </Link>
               </p>
 
               {/* Instagram post links */}
@@ -193,9 +198,11 @@ const Layout = () => {
         <footer id="footer">
           <p>Copyright © {new Date().getFullYear()} You Can Bake It!</p>
           <p>
-            <a href="/termsofuse"> TERMS OF USE</a> &middot;{" "}
-            <a href="/privacyPolicy">PRIVACY POLICY</a> &middot;{" "}
-            <a href="/contact"> CONTACT</a>{" "}
+            <Link to={"/termsofuse"}> TERMS OF USE </Link>
+            &middot;
+            <Link to={"/privacyPolicy"}> PRIVACY POLICY </Link>
+            &middot;
+            <Link to={"/contact"}> CONTACT </Link>
           </p>
         </footer>
       </div>
