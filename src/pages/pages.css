@@ -1,0 +1,11 @@
+/* .aboutDiv {
+    font-family: "Source Sans Pro","Arial Narrow",sans-serif;
+} */
+
+#aboutHeader {
+    margin-top: 30px;
+    font-family: "Source Sans Pro","Arial Narrow",sans-serif;
+    text-transform: uppercase;
+    font-size: 35px;
+
+}

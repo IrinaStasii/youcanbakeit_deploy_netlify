@@ -1,0 +1,44 @@
+.formDiv{
+    flex: 2;
+    min-width: 0;
+    margin-right: 30px;
+    box-sizing: border-box;
+}
+
+#formTitle{
+    font-size: 28px;
+    line-height: 1.2;
+    color: #444;
+    font-weight: 300;
+}
+
+.formContent #name, #email{
+width: 400px;
+}
+
+#hearFromYou{
+    font-weight: 300;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.625;
+}
+
+.required-field::after {
+    content: "*";
+    color: red;
+    margin-left:2px
+  }
+
+#contactSubmitButton {
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .formContent #name, #email{
+        width: auto;
+        }
+  }

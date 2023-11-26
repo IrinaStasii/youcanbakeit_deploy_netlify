@@ -1,0 +1,157 @@
+#kitDescriprion {
+  display: flex;
+}
+
+.row {
+  align-items: center;
+  justify-content: center;
+}
+
+#kitImageBig {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  height: auto;
+  border-radius: 2%;
+}
+
+#description {
+  margin-left: 10px;
+  font-weight: 300;
+    color: #333;
+    font-size: 17px;
+    line-height: 1.625;
+    text-align: justify;
+}
+
+
+#kit_page_leftside{
+  flex: 2;
+  min-width: 0;
+  margin-right: 30px;
+  box-sizing: border-box; 
+  }
+
+@media (max-width: 768px) {
+  #kit_page_leftside{
+    margin-right: 0px;
+    width: 100%;
+    }
+  #kitDescriprion {
+    flex-direction: column;
+  }
+
+  #description {
+    margin-left: -10px;
+  }
+
+  #kitImageBig {
+    align-self: center;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  #title {
+    text-align: center;
+  }
+
+  #notAvailableKit {
+    text-align: center;
+  }
+}
+
+.cardDetails {
+  margin: 10px;
+}
+
+#title {
+  margin-top: 20px;
+  font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
+}
+
+#italicDescription {
+  font-style: italic;
+}
+
+.kitAdvantage {
+  font-weight: bold;
+}
+
+#notAvailableKit {
+  color: #55c6e4;
+  padding: 50px 0px 30px 0px;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 300;
+  text-align: center;
+}
+
+
+#notAvailableKit a:hover{
+  color:  #55c6e4;
+}
+
+#notAvailableKit a{
+  color: #4494ab;
+}
+
+#christmasKit {
+  color: #55c6e4;
+}
+
+.btn-outline-secondary {
+  background-color: white;
+  margin-right: 5px;
+}
+
+.btn.btn-outline-secondary:hover {
+  background-color: #55c6e4;
+  border: 1px solid #55c6e4;
+}
+
+.image-overlay-paragraph {
+  height: 25px;
+  text-align: center;
+  width: 100px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(85, 198, 228, 0.8);
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 1000;
+  padding: 20px;
+  border: 1px solid #ccc;
+  max-width: 90%; 
+  max-height: 90%; 
+  overflow: auto; 
+}
+
+
+.popup-container.show {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .popup-container {
+    max-width: 80%; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+  }
+}
+#boxContents {
+  color: #55c6e4;
+}
+
+.cardDetails:hover {
+  box-shadow: 0 0 10px hsla(193, 72%, 60%);
+}
+

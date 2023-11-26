@@ -1,0 +1,21 @@
+#cake_image, .cakeRecipeImage {
+    width: 100%px;
+}
+
+@media print {
+    /* Define print styles here */
+    body {
+      font-size: 12pt;
+      margin-top: -100px;
+    }
+    /* Hide non-essential elements */
+    .no-print, #printButton {
+      display: none;
+    }
+
+    #root #beforeNavBar, #youcanbaieitText{
+      display:none;
+    }
+
+  }
+

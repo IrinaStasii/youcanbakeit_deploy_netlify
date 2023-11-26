@@ -1,0 +1,6 @@
+.homePageContent {
+    flex: 2;
+    min-width: 0;
+    margin-right: 30px;
+    box-sizing: border-box;
+}
