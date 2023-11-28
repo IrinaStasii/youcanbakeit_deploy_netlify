@@ -1,3 +1,11 @@
+.collapseMenu{
+  display: none;
+}
+
+/* .collapse:not(.show) {
+  display: none;
+} */
+
 .icons {
   display: flex;
   text-align: center;

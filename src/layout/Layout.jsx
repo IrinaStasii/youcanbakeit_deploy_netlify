@@ -34,6 +34,14 @@ const Layout = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+    const navbarCollapse = document.getElementById("navBarCollapse");
+    if (navbarCollapse) {
+      navbarCollapse.classList.add("collapseMenu");
+    }
+  };
+
   return (
     <>
       {/* social media icons */}
@@ -96,33 +104,36 @@ const Layout = () => {
             <Navbar.Toggle
               aria-controls="basic-navbar-nav"
               onClick={toggleMenu}
-              className={`no-border-button mx-auto ${
-                isMenuOpen ? "active" : ""
-              }`}
+              className={`no-border-button mx-auto`}
             >
-              {isMenuOpen ? "X" : <span className="navbar-toggler-icon"></span>}
+              {/* {isMenuOpen ? "X" : <span className="navbar-toggler-icon"></span> } */}
             </Navbar.Toggle>
-            <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar.Collapse id="navBarCollapse">
               <Nav className="me-auto justify-content-center">
-              <Nav.Link as={NavLink} to="/" id="firstLink">
-                 Home
+                <Nav.Link
+                  as={NavLink}
+                  to="/"
+                  id="firstLink"
+                  onClick={handleLinkClick}
+                >
+                  Home
                 </Nav.Link>
-                <Nav.Link as={NavLink} to="/allRecipes">
+                <Nav.Link as={NavLink} to="/allRecipes"  onClick={handleLinkClick}>
                   All Recipes
                 </Nav.Link>
-                <Nav.Link as={NavLink} to="/cakes">
+                <Nav.Link as={NavLink} to="/cakes"  onClick={handleLinkClick}>
                   Cakes
                 </Nav.Link>
-                <Nav.Link as={NavLink} to="/cookies">
+                <Nav.Link as={NavLink} to="/cookies"  onClick={handleLinkClick}>
                   Cookies
                 </Nav.Link>
-                <Nav.Link as={NavLink} to="/kit">
+                <Nav.Link as={NavLink} to="/kit"  onClick={handleLinkClick}>
                   Kit
                 </Nav.Link>
-                <Nav.Link as={NavLink} to="/about">
+                <Nav.Link as={NavLink} to="/about"  onClick={handleLinkClick}>
                   About
                 </Nav.Link>
-                <Nav.Link as={NavLink} to="/contact">
+                <Nav.Link as={NavLink} to="/contact"  onClick={handleLinkClick}>
                   Contact
                 </Nav.Link>
               </Nav>
