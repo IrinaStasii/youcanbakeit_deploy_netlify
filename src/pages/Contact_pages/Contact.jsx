@@ -29,8 +29,10 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isEmailValid && isNameValid) {
+      alert("currently this functionality is unavailable");
       console.log("Form submitted with data:", formData);
     } else {
+      alert("currently this functionality is unavailable");
       console.log("Data not submited");
     }
 

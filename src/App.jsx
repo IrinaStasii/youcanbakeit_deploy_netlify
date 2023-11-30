@@ -14,7 +14,7 @@ import Contact from "./pages/Contact_pages/Contact";
 import Home from "./pages/Home/Home";
 import { useState } from "react";
 import SearchResults from "./layout/SearchResults";
-import Recipe_Detail from "./pages/Recipes/Recipe_Details";
+import RecipeFromSearch from "./layout/RecipeFromSearch";
 
 function App() {
   // const [loggedIn, setLoggedIn] = useState(false);
@@ -27,7 +27,7 @@ function App() {
         <Route path="/search-results/:query" element={<SearchResults />} />
         <Route
           path="/recipe/:name"
-          element={<Recipe_Detail style={{ width: "70%" }} />}
+          element={<RecipeFromSearch style={{ width: "70%" }} />}
         />
         <Route path="kit" element={<Kit />} />
         <Route path="allRecipes/*" element={<AllRecipes />} />

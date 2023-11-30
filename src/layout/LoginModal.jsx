@@ -31,7 +31,7 @@ function LoginModal(props) {
     //   // Handle fetch error
     //   console.error("Error:", error);
     // }
-  
+  alert("currently this functionality is unavailable");
     handleClose();
   };
 

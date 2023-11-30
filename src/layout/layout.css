@@ -440,3 +440,13 @@ form .me-2:focus {
 .title {
   font-weight: bold;
 }
+
+#recipeFromSearchPage {
+  width: 70%;
+}
+
+@media only screen and (max-width: 768px) {
+  #recipeFromSearchPage {
+    width: 100%;
+  }
+}
