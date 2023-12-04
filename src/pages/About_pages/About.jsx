@@ -165,53 +165,53 @@ const About = () => {
   return (
     <div className="aboutContent">
       <div className="aboutDiv">
-        <p id="aboutHeader">ABOUT</p>
-        <p>
-          Welcome to my cozy corner. Let's get to know each other. I'm Irina, a
-          coffee lover passionate about baking, creating beautiful designs, food
-          photography and crafting delicious treats.
-          <br />
-          <br />
-          My adventure began in 2016 when I discovered my passion for baking.
-          Prior to venturing into my own business, I had worked in the field,
-          but I quickly realized my desire to have my own enterprise. At that
-          time, while pursuing my master's degree in Business Administration, I
-          decided to access European funds and opened my own confectionery
-          laboratory in 2017. I started from scratch, learning new recipes,
-          experimenting daily, and constantly seeking out new ones. I learned
-          how to manage a business from 0 and, at the same time, showcased my
-          talent and skill through the daily products I baked.
-        </p>
-        <div className="aboutMeImg">
-          <img src="../IMG_7656.jpg" alt="no_image" />
-          <img src="../IMG_7729.jpg" alt="no_image" />
-        </div>
-        <img src="" alt="" />
-        <p>
-          Now, I'm trying to become a{" "}
-          <span id="frontend">Frontend Developer</span>. Why? Running a business
-          can be demanding, and I have decided to pursue a career in frontend
-          development to achieve a better work-life balance.
-        </p>
-        <p>
-          Why specifically frontend development? Well, while working on my
-          company's website, I gradually discovered a growing passion for
-          coding. I found immense satisfaction in directly crafting and seeing
-          how lines of code can impact and transform the content of a web page.{" "}
-          <span id="frontend">
-            I consider myself a creative person, and I believe that this field
-            aligns perfectly with my desire to create something beautiful and
-            engaging at the same time.{" "}
-          </span>
-          It's a perfect fit for me.
-        </p>
-        <p>
-          Additionally, over the years, my husband and I have taken a
-          significant portion of product photos together. As a result, I've
-          learned some editing skills along the way. Below, you can view a
-          selection of products and photos that{" "}
-          <span className="boldtext">I've both captured and fully edited.</span>{" "}
-        </p>
+          <p id="aboutHeader">ABOUT</p>
+          <p>
+            Welcome to my cozy corner. Let's get to know each other. I'm Irina,
+            a coffee lover passionate about baking, creating beautiful designs,
+            food photography and crafting delicious treats.
+            <br />
+            <br />
+            My adventure began in 2016 when I discovered my passion for baking.
+            Prior to venturing into my own business, I had worked in the field,
+            but I quickly realized my desire to have my own enterprise. At that
+            time, while pursuing my master's degree in Business Administration,
+            I decided to access European funds and opened my own confectionery
+            laboratory in 2017. I started from scratch, learning new recipes,
+            experimenting daily, and constantly seeking out new ones. I learned
+            how to manage a business from 0 and, at the same time, showcased my
+            talent and skill through the daily products I baked.
+          </p>
+          <div className="aboutMeImg">
+            <img src="../IMG_7656.jpg" alt="no_image" />
+            <img src="../IMG_7729.jpg" alt="no_image" />
+          </div>
+          <img src="" alt="" />
+          <p>
+            Now, I'm trying to become a{" "}
+            <span id="frontend">Frontend Developer</span>. Why? Running a
+            business can be demanding, and I have decided to pursue a career in
+            frontend development to achieve a better work-life balance.
+          </p>
+          <p>
+            Why specifically frontend development? Well, while working on my
+            company's website, I gradually discovered a growing passion for
+            coding. I found immense satisfaction in directly crafting and seeing
+            how lines of code can impact and transform the content of a web
+            page. I consider myself a creative person, and I believe that this
+            field aligns perfectly with my desire to create something beautiful
+            and engaging at the same time. It's a perfect fit for me.
+          </p>
+          <p>
+            Additionally, over the years, my husband and I have taken a
+            significant portion of product photos together. As a result, I've
+            learned some editing skills along the way. Below, you can view a
+            selection of products and photos that{" "}
+            <span className="boldtext">
+              I've both captured and fully edited.
+            </span>{" "}
+          </p>
+        
       </div>
       <Gallery galleryImages={galleryImages} />
       <br />

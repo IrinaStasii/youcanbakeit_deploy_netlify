@@ -1,0 +1,124 @@
+.asideContainer {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.asideContainer img {
+  align-self: center;
+}
+
+.widget-wrap {
+  float: right;
+  height: 100%;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.widget-wrap img {
+  max-width: 100%;
+  align-self: center;
+}
+
+#aboutIrina {
+  text-align: center;
+  color: #444;
+}
+
+#imageIrina {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+#welcome_short_description {
+  text-align: justify;
+  margin: 10px;
+  font-weight: 300;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.625;
+}
+
+#readMore {
+  color: #333;
+}
+
+#insta_text {
+  text-align: center;
+  margin-top: 150px;
+  color: #333;
+}
+
+.insta_links {
+  text-align: center;
+}
+
+#insta_photo1 {
+  background-image: url('/cakes_img/MiniRV1.jpg');
+}
+
+#insta_photo2 {
+  background-image: url('/insta_img/IMG_8475.jpg');
+}
+#insta_photo3 {
+  background-image: url('/insta_img/IMG_9081.jpg');
+}
+#insta_photo4 {
+  background-image: url('/insta_img/IMG_9957.jpg');
+}
+#insta_photo5 {
+  background-image: url('/insta_img/IMG_8753.jpg');
+}
+#insta_photo6 {
+  background-image: url('/insta_img/IMG_8428.jpg');
+}
+#insta_photo7 {
+  background-image: url('/insta_img/IMG_9923.jpg');
+}
+
+#insta_photo1,
+#insta_photo2,
+#insta_photo3,
+#insta_photo4,
+#insta_photo5,
+#insta_photo6,
+#insta_photo7 {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  margin: 10px;
+}
+
+#insta_photo1:hover,
+#insta_photo2:hover,
+#insta_photo3:hover,
+#insta_photo4:hover,
+#insta_photo5:hover,
+#insta_photo6:hover,
+#insta_photo7:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+  .asideContainer {
+    width: 100%;
+  }
+
+  .widget-wrap {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .widget-wrap img {
+    max-width: 480px;
+  }
+}

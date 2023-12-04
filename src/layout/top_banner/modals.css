@@ -1,0 +1,15 @@
+#loginModal,
+#signupModal {
+  height: 40px;
+}
+
+
+.login_signup_Buttons {
+  background-color:#55c6e4;
+  border: 1px solid #56aac1;;
+}
+
+.login_signup_Buttons:hover {
+  background-color:#4bb0cc;
+  border: 1px solid #56aac1;;
+}

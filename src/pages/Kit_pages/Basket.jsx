@@ -6,6 +6,11 @@ const Basket = ({ basket, onDeleteFromBasket }) => {
     return total;
   };
 
+
+  const checkoutFunction = () => {
+    alert("currently this functionality is unavailable")
+  }
+
   return (
     <div className="basket">
       <h2>Basket Contents</h2>
@@ -20,7 +25,7 @@ const Basket = ({ basket, onDeleteFromBasket }) => {
         ))}
       </ul>
       <p>Total: ${calculateTotal()}</p>
-      <button>Checkout</button>
+      <button onClick={checkoutFunction}>Checkout</button>
     </div>
   );
 };

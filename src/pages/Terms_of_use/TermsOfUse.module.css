@@ -1,0 +1,19 @@
+.termsOfUseDiv {
+  margin-top: 20px;
+  font-weight: 300;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.625;
+}
+
+.termsTitle {
+  font-size: xx-large;
+}
+
+.termsUpdate {
+  font-size: large;
+}
+
+.title {
+  font-weight: bold;
+}

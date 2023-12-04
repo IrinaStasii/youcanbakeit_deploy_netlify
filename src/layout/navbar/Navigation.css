@@ -1,0 +1,103 @@
+.collapseMenu {
+  display: none;
+}
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 0;
+}
+
+.no-border-button,
+.no-border-button:focus {
+  margin-bottom: 15px;
+  border: none;
+  outline: 0;
+  font-weight: 900;
+  box-shadow: none;
+  font-size: xx-large;
+}
+
+.navbar-toggler.active {
+  font-size: 45px;
+  font-weight: 400;
+  height: 55px;
+}
+
+.me-auto justify-content-center navbar-nav {
+  margin: 0px 30px 0px 30px;
+}
+
+.nav-link {
+  padding: 20px 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  width: 15%;
+  text-align: center;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  background-color: black;
+  color: white;
+}
+
+.nav-link a {
+  transition: background-color 0.1s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: rgb(25, 25, 25);
+  color: white;
+}
+
+.navbar-nav {
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  width: 100%;
+}
+
+ .navbar>.container-fluid {
+ justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .navbar-nav {
+    border-bottom: none;
+    border-top: none;
+  }
+
+  .nav-link {
+    border-bottom: 2px solid gray;
+    padding: 20px 10px;
+    width: auto;
+    text-align: left;
+  }
+
+  .nav-link:hover {
+    background-color: rgb(25, 25, 25);
+    color: white;
+  }
+
+  #firstLink {
+    border-top: 2px solid gray;
+  }
+
+}
+
+@media screen and (max-width: 280px) {
+  .col-sm-6 .recipe-card {
+    width: 180px;
+  }
+}
+
+
+@media only screen and (max-width: 1023px){
+.nav-link {
+    border-bottom: 2px solid gray;
+    padding: 20px 10px;
+    width: auto;
+    text-align: left;
+}}
+

@@ -5,7 +5,7 @@ import "../Recipes/allrecipes.css";
 import { useState } from "react";
 import RecipePrint from "./RecipePrint";
 
-const Recipe_Detail = ({ style }) => {
+const Recipe_Detail = () => {
   const { name } = useParams();
   const decodedName = decodeURIComponent(name);
   const [comments, setComments] = useState(0);
@@ -22,7 +22,6 @@ const Recipe_Detail = ({ style }) => {
   }
 
   return (
-    <div style={style}>
     <div className="recipe-details-page">
       {/* entry */}
       <header className="entry-header">
@@ -120,7 +119,6 @@ const Recipe_Detail = ({ style }) => {
 
       <button className="printButton" onClick={handlePrintClick}>Print Recipe</button>
       {isPrinted ? <RecipePrint recipe={recipe} /> : null}
-    </div>
     </div>
   );
 };

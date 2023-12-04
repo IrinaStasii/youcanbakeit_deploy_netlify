@@ -6,7 +6,8 @@ import "./layout.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 const SearchResults = () => {
-  const { query } = useParams();
+  const {query} = useParams();
+  console.log(query);
 
   const searchQuery = query.toLowerCase();
 
@@ -23,6 +24,7 @@ const SearchResults = () => {
 
     return hasMatchingKeyword || hasMatchingName;
   });
+
 
   return (
     <div className="search-resultsPageContent">
@@ -43,7 +45,7 @@ const SearchResults = () => {
                     <h3>
                       <Link
                         className="recipe-link"
-                        to={`/recipe/${encodeURIComponent(recipe.name)}`}
+                        to={`/search-results/${encodeURIComponent(query)}/recipe/${encodeURIComponent(recipe.name)}`}
                       >
                         <img
                           src={import.meta.env.BASE_URL + recipe.image}
@@ -59,6 +61,7 @@ const SearchResults = () => {
           </Container>
         )}
       </div>
+ 
     </div>
   );
 };

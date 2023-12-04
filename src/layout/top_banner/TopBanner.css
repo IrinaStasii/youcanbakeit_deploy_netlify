@@ -1,0 +1,33 @@
+.icons {
+  display: flex;
+  text-align: center;
+  margin: auto 0;
+}
+.icons li {
+  padding: 10px;
+  list-style-type: none;
+}
+
+.icons li img {
+  width: 35px;
+  height: 35px;
+}
+
+.icons li img:hover {
+  opacity: 0.5;
+}
+
+.modals {
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .icons {
+    margin-left: -35px;
+  }
+  .modals {
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}

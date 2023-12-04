@@ -1,0 +1,23 @@
+#footer {
+  color: #999;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+#footer a {
+  color: #999;
+}
+
+#footer p {
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  #footer {
+    margin-top: 0px;
+  }
+}

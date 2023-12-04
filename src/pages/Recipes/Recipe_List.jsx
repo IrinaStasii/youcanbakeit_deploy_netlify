@@ -1,7 +1,7 @@
-import React from "react";
-import Recipe_Card from "../Recipes/Recipe_Card";
-import { Container, Row, Col } from "react-bootstrap";
-import "./allrecipes.css";
+import React from 'react';
+import Recipe_Card from '../Recipes/Recipe_Card';
+import { Container, Row, Col } from 'react-bootstrap';
+import './allrecipes.css';
 
 const Recipe_List = ({ recipes, category }) => {
   const filteredRecipes = category
@@ -10,9 +10,9 @@ const Recipe_List = ({ recipes, category }) => {
       recipes;
 
   return (
-    <div className="all-recipes-list">
+    <div className='all-recipes-list'>
       <Container>
-        <Row id="search-resultsRow">
+        <Row id='search-resultsRow'>
           {filteredRecipes.map((recipe) => (
             <Col lg={4} md={6} sm={6} key={recipe.id}>
               <Recipe_Card key={recipe.id} {...recipe} />
@@ -26,8 +26,7 @@ const Recipe_List = ({ recipes, category }) => {
 
 export default Recipe_List;
 
-
-  /* <Container>
+/* <Container>
 <Row>
   {products.map((product) => (
     <Col lg={6} md={8} sm={12} key={product.id}>
@@ -41,4 +40,3 @@ export default Recipe_List;
 </Row>
 <Basket basket={basket} onDeleteFromBasket={delefeFromBasket} />
 </Container> */
-
