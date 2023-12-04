@@ -1,5 +1,6 @@
 import React from "react";
 import "./layout.css";
+import { Link } from "react-router-dom";
 
 const PrivacyPolicy = () => {
   return (
@@ -52,7 +53,8 @@ const PrivacyPolicy = () => {
       <p className="title"> 7. Contact Us: </p>
       <p>
         a. If you have any questions or concerns about these Terms of Use,
-        please contact us - contact.youcanbakeit@gmail.com or acces this <a href="/contact">link</a>.
+        please contact us - contact.youcanbakeit@gmail.com or acces this{" "}
+        <Link to={"/contact"}> link </Link> .
       </p>
     </div>
   );

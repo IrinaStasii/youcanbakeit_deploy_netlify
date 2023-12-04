@@ -54,7 +54,10 @@ const TermsOfUse = () => {
       <p>
         a. If you have any questions or concerns about these Terms of Use,
         please contact us - contact.youcanbakeit@gmail.com or acces this
-        <Link to={"/contact"}> link</Link>.
+        <Link to={"/contact"}>
+            {" "}
+            link{" "}
+          </Link>{" "}
       </p>
     </div>
   );

@@ -3,7 +3,7 @@ import KitDetails from "./KitDetails";
 import { Container, Row, Col } from "react-bootstrap";
 import "./kit.css";
 import Basket from "./Basket";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Kit() {
   const products = [
