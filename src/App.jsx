@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { AlertProvider } from './alert/useAlert';
 import Layout from './layout/Layout';
 
 function App() {
@@ -9,7 +10,9 @@ function App() {
 
   return (
     <>
+      <AlertProvider>
       <Layout />
+      </AlertProvider>
     </>
   );
 }

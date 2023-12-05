@@ -1,44 +1,69 @@
-.formDiv{
-    flex: 2;
-    min-width: 0;
-    margin-right: 30px;
-    box-sizing: border-box;
+.formDiv {
+  flex: 2;
+  min-width: 0;
+  margin-right: 30px;
+  box-sizing: border-box;
 }
 
-#formTitle{
-    font-size: 28px;
-    line-height: 1.2;
-    color: #444;
-    font-weight: 300;
+#formTitle {
+  font-size: 28px;
+  line-height: 1.2;
+  color: #444;
+  font-weight: 300;
 }
 
-.formContent #name, #email{
-width: 400px;
+.formContent #name,
+#email {
+  width: 400px;
 }
 
-#hearFromYou{
-    font-weight: 300;
-    color: #333;
-    font-size: 18px;
-    line-height: 1.625;
+#hearFromYou {
+  font-weight: 300;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.625;
+  margin-bottom: 40px;
 }
 
 .required-field::after {
-    content: "*";
-    color: red;
-    margin-left:2px
-  }
+  content: "*";
+  color: red;
+  margin-left: 2px;
+}
 
 #contactSubmitButton {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
-    .formContent #name, #email{
-        width: auto;
-        }
+  .formContent #name,
+  #email {
+    width: auto;
   }
+}
+
+.error-message {
+  color: #55c6e4;
+}
+
+label {
+  font-weight: 600;
+}
+
+.enabledButton {
+  background-color: #55c6e4;
+  border: 1px solid #56aac1;
+}
+
+.formInputs {
+  height: 300px;
+}
+
+.submitFormButton {
+    margin-top: 30px;
+    cursor: not-allowed;
+}
