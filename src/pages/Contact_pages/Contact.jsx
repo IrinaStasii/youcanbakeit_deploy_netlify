@@ -62,6 +62,9 @@ const Contact = () => {
         );
 
       setFormData({ name: "", email: "", message: "" });
+      setIsEmailValid(false);
+      setIsNameValid(false);
+      setIsMessageValid(false);
     } else {
       showAlert("Message couldn't be sent. Please try again.");
     }
@@ -93,7 +96,6 @@ const Contact = () => {
               <div className="required-field">
                 <label htmlFor="name">First and Last Name: </label>
               </div>
-              <div className="formInputs">
                 <input
                   className="form-control required-field"
                   type="text"
@@ -147,13 +149,6 @@ const Contact = () => {
                   )}
                 </div>
               </div>
-              {/* <button
-              id="contactSubmitButton"
-              type="submit"
-            >
-              Submit
-            </button> */}
-            </div>
             <Button
               className={
                 !isMessageValid || !isNameValid || !isEmailValid
