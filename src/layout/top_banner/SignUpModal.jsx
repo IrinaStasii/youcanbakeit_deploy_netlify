@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import './modals.css';
+import { useAlert } from '../../alert/useAlert';
 
 function SignUpModal(props) {
+  const showAlertSignUp = useAlert();
   const [show, setShow] = useState(false);
   const [userData, setUserData] = useState({ userName: '', userPass: '' });
 
@@ -30,7 +32,8 @@ function SignUpModal(props) {
     //   // Handle fetch error
     //   console.error("Error:", error);
     // }
-    alert("currently this functionality is unavailable");
+    showAlertSignUp("currently this functionality is unavailable")
+    // alert("currently this functionality is unavailable");
     handleClose();
   };
 
