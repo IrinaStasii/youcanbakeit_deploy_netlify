@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import KitDetails from "./KitDetails";
 import { Container, Row, Col } from "react-bootstrap";
 import "./kit.css";
-import Basket from "./Basket";
+// import Basket from "./Basket";
 import { Link } from "react-router-dom";
 
 function Kit() {
@@ -31,7 +31,7 @@ function Kit() {
       premium: false,
       boxContents: "0.8 kg cookies and 2 servings of Hot Chocolate.🍪☕",
       observations:
-      "A mixer, few eggs and butter is needed to make the cookies and milk for Hot Chocolate.",
+        "A mixer, few eggs and butter is needed to make the cookies and milk for Hot Chocolate.",
       description:
         "A special kit for someone special, whether it's a gift🎁 or if you're baking together with a loved one. The dark red chocolate chip cookies contain drops of Ruby chocolate, which is the most unusual chocolate discovered in the last 80 years. Named Ruby after its deep pink hue, without any added flavors or colorants.🍫 The raspberry-flavored hot chocolate complements this exceptional kit both in appearance and taste.",
     },
@@ -45,7 +45,7 @@ function Kit() {
       premium: false,
       boxContents: "0.8 kg cookies and 2 servings of Hot Chocolate.🍪☕",
       observations:
-      "A mixer, few eggs and butter is needed to make the cookies and milk for Hot Chocolate.",
+        "A mixer, few eggs and butter is needed to make the cookies and milk for Hot Chocolate.",
       description:
         "Do you like brownie-textured cookies, rich in chocolate flavor, and with a coffee aroma? ☕🍫 Then this kit is for you! If you want to create a gift kit for a cookie and coffee lover, this is the kit I recommend. 🎁 I promise that the cookies you'll get will impress with their texture, taste, and appearance. They are soft, chocolatey (not overly sweet), not very sweet, and have a subtle coffee flavor. 🤤",
     },
@@ -71,9 +71,9 @@ function Kit() {
       christmas: true,
       available: false,
       premium: true,
-      boxContents: "1 kg cookies and a special mug from my very special friend, Irina from Urban Tale.🍪☕",
-      observations:
-        "Few eggs and butter is needed to make this kit.",
+      boxContents:
+        "1 kg cookies and a special mug from my very special friend, Irina from Urban Tale.🍪☕",
+      observations: "Few eggs and butter is needed to make this kit.",
       description:
         "Who doesn't love chocolate chips? We'd probably eat them in anything: pastries, muffins, cakes, but especially in cookies. 🤤 I recommend this kit for classic cookie lovers, without too many flavors or being too complicated to make.",
     },
@@ -85,9 +85,9 @@ function Kit() {
       christmas: true,
       available: true,
       premium: true,
-      boxContents: "1 kg cookies and a special mug from my very special friend, Irina from Urban Tale. 🍪☕",
-      observations:
-      "Few eggs and butter is needed to make this kit.",
+      boxContents:
+        "1 kg cookies and a special mug from my very special friend, Irina from Urban Tale. 🍪☕",
+      observations: "Few eggs and butter is needed to make this kit.",
       description:
         "Who doesn't love chocolate chips? We'd probably eat them in anything: pastries, muffins, cakes, but especially in cookies. 🤤 I recommend this kit for classic cookie lovers, without too many flavors or being too complicated to make.",
     },
@@ -99,11 +99,11 @@ function Kit() {
       christmas: true,
       available: false,
       premium: true,
-      boxContents: "2 servings of Hot Chocolate and a mug from my very special friend, Irina from Urban Tale. ☕",
-      observations:
-      "You need milk to make this kit.",
+      boxContents:
+        "2 servings of Hot Chocolate and a mug from my very special friend, Irina from Urban Tale. ☕",
+      observations: "You need milk to make this kit.",
       description:
-      "Hot chocolate on a cold day or night? What a delight! Make it for yourself or someone dear to you.",
+        "Hot chocolate on a cold day or night? What a delight! Make it for yourself or someone dear to you.",
     },
     {
       id: 8,
@@ -113,11 +113,11 @@ function Kit() {
       christmas: true,
       available: false,
       premium: true,
-      boxContents: "2 servings of Hot Chocolate and a mug from my very special friend, Irina from Urban Tale. ☕",
-      observations:
-      "You need milk to make this kit.",
+      boxContents:
+        "2 servings of Hot Chocolate and a mug from my very special friend, Irina from Urban Tale. ☕",
+      observations: "You need milk to make this kit.",
       description:
-      "Hot chocolate on a cold day or night? What a delight! Make it for yourself or someone dear to you.",
+        "Hot chocolate on a cold day or night? What a delight! Make it for yourself or someone dear to you.",
     },
     {
       id: 9,
@@ -129,9 +129,9 @@ function Kit() {
       premium: false,
       boxContents: "1 kg cookies and and 2 servings of Hot Chocolate.🍪☕",
       observations:
-      "A mixer, few eggs and butter is needed to make the cookies and milk for Hot Chocolate.",
+        "A mixer, few eggs and butter is needed to make the cookies and milk for Hot Chocolate.",
       description:
-       "These cookies boast a rich, fudgy interior that's as soft as a cloud, with a satisfyingly chewy exterior adorned in a mesmerizing, crackled pattern. Coated in a delicate dusting of powdered sugar, they glisten like freshly fallen snow.",
+        "These cookies boast a rich, fudgy interior that's as soft as a cloud, with a satisfyingly chewy exterior adorned in a mesmerizing, crackled pattern. Coated in a delicate dusting of powdered sugar, they glisten like freshly fallen snow.",
     },
     {
       id: 10,
@@ -143,38 +143,36 @@ function Kit() {
       premium: false,
       boxContents: "1 kg cookies and and 2 servings of Hot Chocolate.🍪☕",
       observations:
-      "Few eggs and butter is needed to make the cookies and milk for Hot Chocolate.",
+        "Few eggs and butter is needed to make the cookies and milk for Hot Chocolate.",
       description:
-       "If you are not a fan of classic chocolate chips, maybe you should try white ones. I recommend this kit for classic cookie lovers, without too many flavors or being too complicated to make.",
+        "If you are not a fan of classic chocolate chips, maybe you should try white ones. I recommend this kit for classic cookie lovers, without too many flavors or being too complicated to make.",
     },
-
   ];
 
+  // const [basket, setBasket] = useState([]);
 
-  const [basket, setBasket] = useState([]);
+  // const addToBasket = (product) => {
+  //   const productIndex = basket.findIndex((item) => item.id === product.id);
 
-  const addToBasket = (product) => {
-    const productIndex = basket.findIndex((item) => item.id === product.id);
+  //   if (productIndex !== -1) {
+  //     // If the product is already in the basket, update its quantity
+  //     const updatedBasket = [...basket];
+  //     updatedBasket[productIndex].quantity += 1;
+  //     setBasket(updatedBasket);
+  //   } else {
+  //     // If the product is not in the basket, add it with quantity 1
+  //     setBasket([...basket, { ...product, quantity: 1 }]);
+  //   }
+  // };
 
-    if (productIndex !== -1) {
-      // If the product is already in the basket, update its quantity
-      const updatedBasket = [...basket];
-      updatedBasket[productIndex].quantity += 1;
-      setBasket(updatedBasket);
-    } else {
-      // If the product is not in the basket, add it with quantity 1
-      setBasket([...basket, { ...product, quantity: 1 }]);
-    }
-  };
-
-  const delefeFromBasket = (index) => {
-    const updatedBasket = [...basket];
-    updatedBasket.splice(index, 1);
-    setBasket(updatedBasket);
-  };
+  // const delefeFromBasket = (index) => {
+  //   const updatedBasket = [...basket];
+  //   updatedBasket.splice(index, 1);
+  //   setBasket(updatedBasket);
+  // };
 
   return (
-   <div id="kit_page_leftside">
+    <div id="kit_page_leftside">
       <div id="kitDescriprion">
         <img id="kitImageBig" src="./kit_img/IMG_8551.jpg" alt="Kit Box" />
         <div id="description">
@@ -202,14 +200,16 @@ function Kit() {
             - Good idea to give them as Christmas presents for employees. <br />
             <span id="italicDescription">*Special offers for companies!</span>
           </p>{" "}
-          <p>
-            - Make it for yourself!
-          </p>
+          <p>- Make it for yourself!</p>
         </div>
       </div>
       <h4 id="notAvailableKit">
-            For the moment, these kits are not available. If you are interested and would like to know when will they be available, please <span><Link to={"/contact"}> contact</Link>  us.{" "} </span>
-          </h4>
+        For the moment, these kits are not available. If you are interested and
+        would like to know when will they be available, please{" "}
+        <span>
+          <Link to={"/contact"}> contact</Link> us.{" "}
+        </span>
+      </h4>
       <Container>
         <Row>
           {products.map((product) => (
@@ -217,14 +217,20 @@ function Kit() {
               <KitDetails
                 key={product.id}
                 product={product}
-                onAddToBasket={addToBasket}
+                // productId={product.id}
+                // name={product.name}
               />
+              {/* <KitDetails
+                key={product.id}
+                product={product}
+                onAddToBasket={addToBasket}
+              /> */}
             </Col>
           ))}
         </Row>
-        <Basket basket={basket} onDeleteFromBasket={delefeFromBasket} />
+        {/* <Basket basket={basket} onDeleteFromBasket={delefeFromBasket} /> */}
       </Container>
-      </div>
+    </div>
   );
 }
 
