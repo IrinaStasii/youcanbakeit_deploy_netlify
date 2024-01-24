@@ -2,14 +2,23 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import "./kit.css";
 import { useState } from "react";
+import { useShoppingCart } from "./ShoppingCartContext";
 
-const KitDetails = ({ product, onAddToBasket }) => {
+//each kit details on the page
+const KitDetails = ({ product}) => {
   const [isPopupVisible, setPopupVisible] = useState(false);
+  const {
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart,
+  } = useShoppingCart();
+  const quantity = getItemQuantity(product.id);
+ 
 
   return (
     <div
       className="cardDetails"
-      // onMouseEnter={() => setPopupVisible(true)}
       onMouseLeave={() => setPopupVisible(false)}
     >
       <Card>
@@ -26,24 +35,32 @@ const KitDetails = ({ product, onAddToBasket }) => {
             </Card.Text>
           ) : null}
           <Card.Text>Price: ${product.price}</Card.Text>
-          {product.available ? (
-            <Button
-              className="btn-sm btn-outline-secondary"
-              onClick={() => onAddToBasket(product)}
-            >
-              Add to Basket
-            </Button>
-          ) : (
-            <Button className="btn-sm btn-outline-secondary disabled">
-              Not available
-            </Button>
-          )}
-          <Button
-            className="btn-sm btn-outline-secondary"
-            onClick={() => setPopupVisible(true)}
-          >
-            Show more details
-          </Button>
+
+          <div className="mt-auto">
+            {quantity === 0 ? (
+              <Button className="w-100" onClick={() => increaseCartQuantity(product.id, product.name, product.image)}> + Add To Cart </Button>
+            ) : (
+              <div className="d-flex align-items-center flex-column">
+                <div
+                  className="d-flex align-items-center justify-content-center"
+                  style={{ gap: ".5rem" }}
+                >
+                  <Button onClick={() => decreaseCartQuantity(product.id)}>-</Button>
+                  <div className="">
+                    <span className="fs-3">{quantity} </span>
+                    in cart
+                  </div>
+                  <Button onClick={() => increaseCartQuantity(product.id)}> + </Button>
+                </div>
+                <Button variant="danger" size="sm" onClick={() => removeFromCart(product.id)}> Remove</Button>
+              </div>
+            )}
+            <div className="d-flex align-items-center flex-column">
+              <Button className="w-100" onClick={() => setPopupVisible(true)}>
+                Show more details
+              </Button>
+            </div>
+          </div>
         </Card.Body>
       </Card>
       <div className={`popup-container ${isPopupVisible ? "show" : ""}`}>

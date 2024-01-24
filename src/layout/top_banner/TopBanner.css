@@ -21,13 +21,22 @@
   margin-left: auto;
 }
 
+#shoppingCard {
+  position: relative;
+}
+
+
 @media only screen and (max-width: 768px) {
   .icons {
     margin-left: -35px;
   }
-  .modals {
+  .modals,#shoppingCard  {
     margin: auto;
     margin-top: 5px;
     margin-bottom: 5px;
   }
+}
+
+.button-with-cart-icon:hover .cart-icon {
+  fill: white;
 }
