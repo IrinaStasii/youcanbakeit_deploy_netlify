@@ -1,39 +1,21 @@
+// SignUpModal.jsx
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import './modals.css';
 import { useAlert } from '../../alert/useAlert';
 
-function SignUpModal(props) {
+function SignUpModal({ show, onHide }) {
   const showAlertSignUp = useAlert();
-  const [show, setShow] = useState(false);
   const [userData, setUserData] = useState({ userName: '', userPass: '' });
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => {
+    setUserData({ userName: '', userPass: '' });
+    onHide();
+  };
 
-  const handleLogin = async () => {
-    // try {
-    //   const response = await fetch("/login.php", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(userData),
-    //   });
-
-    //   if (response.status === 200) {
-    //     // Authentication successful, perform redirection
-    //     window.location.href = "/redirect-url";
-    //   } else {
-    //     // Handle authentication failure
-    //     console.log("Authentication failed");
-    //   }
-    // } catch (error) {
-    //   // Handle fetch error
-    //   console.error("Error:", error);
-    // }
-    showAlertSignUp("currently this functionality is unavailable")
-    // alert("currently this functionality is unavailable");
+  const handleSignUp = async () => {
+    // Perform sign-up logic here
+    showAlertSignUp("currently this functionality is unavailable");
     handleClose();
   };
 
@@ -44,10 +26,6 @@ function SignUpModal(props) {
 
   return (
     <>
-      <Button id='signupModal' variant='outline-secondary' onClick={handleShow}>
-        SignUp
-      </Button>
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>SignUp</Modal.Title>
@@ -81,7 +59,7 @@ function SignUpModal(props) {
           <Button variant='secondary' onClick={handleClose}>
             Close
           </Button>
-          <Button className='login_signup_Buttons' onClick={handleLogin}>
+          <Button className='login_signup_Buttons' onClick={handleSignUp}>
             SignUp
           </Button>
         </Modal.Footer>

@@ -2,38 +2,32 @@ import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import './modals.css';
 import { useAlert } from '../../alert/useAlert';
+import LoginService from '../LoginService';
+import LoginIcon from './LoginIcon';
+import SignUpModal from './SignUpModal';
 
-function LoginModal(props) {
+function LoginModal() {
   const showAlertLogin = useAlert();
   const [show, setShow] = useState(false);
   const [userData, setUserData] = useState({ userName: '', userPass: '' });
+  const [showSignUpModal, setShowSignUpModal] = useState(false); 
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    setShowSignUpModal(false); 
+  };
+
   const handleShow = () => setShow(true);
 
-  const handleLogin = async () => {
-    // try {
-    //   const response = await fetch("/login.php", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(userData),
-    //   });
 
-    //   if (response.status === 200) {
-    //     // Authentication successful, perform redirection
-    //     window.location.href = "/redirect-url";
-    //   } else {
-    //     // Handle authentication failure
-    //     console.log("Authentication failed");
-    //   }
-    // } catch (error) {
-    //   // Handle fetch error
-    //   console.error("Error:", error);
-    // }
-    showAlertLogin("currently this functionality is unavailable");
-    // alert("currently this functionality is unavailable");
+  const handleLogin = async () => {
+    const loginResult = LoginService.login(userData.userName, userData.userPass);
+
+    if (loginResult) {
+      showAlertLogin("Login successful");
+    } else {
+      showAlertLogin("Login failed");
+    }
     handleClose();
   };
 
@@ -42,11 +36,14 @@ function LoginModal(props) {
     setUserData({ ...userData, [name]: value });
   };
 
+  const openSignUpModal = () => {
+    handleClose(); 
+    setShowSignUpModal(true);  
+  };
+
   return (
     <>
-      <Button id='loginModal' variant='outline-secondary' onClick={handleShow}>
-        Login
-      </Button>
+<LoginIcon onClick={handleShow} />
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -84,8 +81,15 @@ function LoginModal(props) {
           <Button className='login_signup_Buttons' onClick={handleLogin}>
             Login
           </Button>
+          <p>Don't have an account?</p>
+          <Button id='signupModal' variant='outline-secondary' onClick={openSignUpModal}>
+            SignUp
+          </Button>
         </Modal.Footer>
       </Modal>
+      {showSignUpModal && (
+        <SignUpModal show={showSignUpModal} onHide={() => setShowSignUpModal(false)} />
+      )}
     </>
   );
 }
