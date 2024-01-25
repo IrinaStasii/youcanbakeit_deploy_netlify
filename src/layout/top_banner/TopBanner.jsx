@@ -28,6 +28,9 @@ const TopBanner = () => {
       setInput("");
     }
   };
+
+  const userLoggedIn = sessionStorage.getItem("userLoggedIn");
+  const userName = sessionStorage.getItem("userName");
   return (
     <>
       {/* social media icons */}
@@ -50,14 +53,52 @@ const TopBanner = () => {
             <img src="/icons/inst_icon.png" alt="no_inst" />
           </a>
         </li>
+        {/* <li>
+          user is logged in as {userLoggedIn}
+        </li> */}
+        {/* <li>
+          you are logged in as {userName}
+        </li> */}
       </ul>
-
+      {userLoggedIn ? <p> you are logged in as {userName}</p> : null}
       {/* login and signup modals */}
       <div className="modals">
-        <LoginModal />
-        <SignUpModal />
-      </div>
 
+        <LoginModal />
+        <Button
+          onClick={openCart}
+          id="shoppingCard"
+          variant="outline-secondary"
+          className="rounded-circle button-with-cart-icon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1rem"
+            height="1.5rem"
+            fill="#6c757d"
+            className="bi bi-cart cart-icon"
+            viewBox="0 0 15 15"
+          >
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+          </svg>
+          {cartQuantity > 0 && (
+            <div
+              className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
+              style={{
+                color: "white",
+                width: "1.5rem",
+                height: "1.5rem",
+                position: "absolute",
+                bottom: "0",
+                right: "0",
+                transform: "translate(25% 25%)",
+              }}
+            >
+              {cartQuantity}
+            </div>
+          )}
+        </Button>
+      </div>
       {/* search input */}
       <Form className="d-flex">
         <Form.Control
@@ -77,40 +118,6 @@ const TopBanner = () => {
           Search
         </Button>
       </Form>
-
-      <Button
-        onClick={openCart}
-        id="shoppingCard"
-        variant="outline-secondary"
-        className="rounded-circle button-with-cart-icon"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="1.5rem"
-          height="2rem"
-          fill="#6c757d"
-          className="bi bi-cart cart-icon"
-          viewBox="0 0 16 16"
-        >
-          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-        </svg>
-        {cartQuantity > 0 && (
-          <div
-            className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
-            style={{
-              color: "white",
-              width: "1.5rem",
-              height: "1.5rem",
-              position: "absolute",
-              bottom: "0",
-              right: "0",
-              transform: "translate(25% 25%)",
-            }}
-          >
-            {cartQuantity}
-          </div>
-        )}
-      </Button>
     </>
   );
 };

@@ -12,7 +12,7 @@ const Aside = () => {
           Welcome to my cozy corner. Let's get to know each other. I'm Irina, a
           coffee lover passionate about baking, creating beautiful designs, food
           photography and crafting delicious treats.{" "}
-          <Link to={"/about"} id="readMore">
+          <Link to={"/about"} id="readMore" target="_blank">
             Read more...{" "}
           </Link>
         </p>
