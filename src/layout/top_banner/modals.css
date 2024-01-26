@@ -14,3 +14,7 @@
   border: 1px solid #56aac1;;
 }
 
+.hoverable-svg:hover {
+  fill: #55c6e4;
+}
+

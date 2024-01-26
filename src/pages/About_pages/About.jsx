@@ -165,7 +165,7 @@ const About = () => {
   return (
     <div className="aboutContent">
       <div className="aboutDiv">
-          <p id="aboutHeader">ABOUT</p>
+          <p id="home_welcome">ABOUT</p>
           <p>
             Welcome to my cozy corner. Let's get to know each other. I'm Irina,
             a coffee lover passionate about baking, creating beautiful designs,
@@ -228,9 +228,9 @@ const About = () => {
           <br />
           If you have a question about a recipe, please ask it on that post, as
           others may have the same question. As always, you can also reach me on{" "}
-          <a href="https://www.instagram.com/irina_stasii/">
+          <a href="https://www.instagram.com/irina_stasii/" target="_blank">
             Instagram
-          </a> or <a href="https://www.facebook.com/youcanbakeit">Facebook</a> .
+          </a> or <a href="https://www.facebook.com/youcanbakeit" target="_blank">Facebook</a> .
         </p>
         <br />
         <p>Thanks for stopping by!</p>

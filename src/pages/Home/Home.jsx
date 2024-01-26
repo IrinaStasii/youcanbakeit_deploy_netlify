@@ -6,8 +6,8 @@ const Home = () => {
 
   return (
     <div className="homePageContent">
-      <h1 id="home_welcome">Welcome</h1>
-      {/* {loggedIn ? <div>You are loggedin</div> : <div>you are not loggedin</div>} */}
+       {/* {loggedIn ? <div>You are loggedin</div> : <div>you are not loggedin</div>} */}
+      <h1 id="home_welcome">WELCOME</h1>
       <p>
         ...to my cozy corner. Let's get to know each other. I'm Irina, a coffee
         lover passionate about baking, creating beautiful designs, food
