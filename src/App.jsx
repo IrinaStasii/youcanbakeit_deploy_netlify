@@ -11,11 +11,11 @@ function App() {
 
   return (
     <>
-      <ShoppingCartProvider>
-        <AlertProvider>
+      <AlertProvider>
+        <ShoppingCartProvider>
           <Layout />
-        </AlertProvider>
-      </ShoppingCartProvider>
+        </ShoppingCartProvider>
+      </AlertProvider>
     </>
   );
 }

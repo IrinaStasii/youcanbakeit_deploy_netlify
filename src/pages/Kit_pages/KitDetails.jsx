@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useShoppingCart } from "./ShoppingCartContext";
 
 //each kit details on the page
-const KitDetails = ({ product}) => {
+const KitDetails = ({ product }) => {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const {
     getItemQuantity,
@@ -14,13 +14,9 @@ const KitDetails = ({ product}) => {
     removeFromCart,
   } = useShoppingCart();
   const quantity = getItemQuantity(product.id);
- 
 
   return (
-    <div
-      className="cardDetails"
-      onMouseLeave={() => setPopupVisible(false)}
-    >
+    <div className="cardDetails" onMouseLeave={() => setPopupVisible(false)}>
       <Card>
         {product.premium ? (
           <p className="image-overlay-paragraph">Premium</p>
@@ -37,26 +33,68 @@ const KitDetails = ({ product}) => {
           <Card.Text>Price: ${product.price}</Card.Text>
 
           <div className="mt-auto">
-            {quantity === 0 ? (
-              <Button className="w-100" onClick={() => increaseCartQuantity(product.id, product.name, product.image)}> + Add To Cart </Button>
-            ) : (
-              <div className="d-flex align-items-center flex-column">
-                <div
-                  className="d-flex align-items-center justify-content-center"
-                  style={{ gap: ".5rem" }}
+            {/* {product.available ? (
+            <Button
+              className="btn-sm btn-outline-secondary"
+              onClick={() => onAddToBasket(product)}
+            >
+              Add to Basket
+            </Button>
+          ) : (
+            <Button className="btn-sm btn-outline-secondary disabled">
+              Not available
+            </Button>
+          )} */}
+
+            {product.available ? (
+              quantity === 0 ? (
+                <Button
+                  className="w-100 btn-outline-secondary"
+                  onClick={() =>
+                    increaseCartQuantity(
+                      product.id,
+                      product.name,
+                      product.image
+                    )
+                  }
                 >
-                  <Button onClick={() => decreaseCartQuantity(product.id)}>-</Button>
-                  <div className="">
-                    <span className="fs-3">{quantity} </span>
-                    in cart
+                  {" "}
+                  + Add To Cart{" "}
+                </Button>
+              ) : (
+                <div className="d-flex align-items-center flex-column ">
+                  <div
+                    className="d-flex align-items-center justify-content-center"
+                    style={{ gap: ".5rem" }}
+                  >
+                    <Button className="btn-outline-secondary" onClick={() => decreaseCartQuantity(product.id)}>
+                      -
+                    </Button>
+                    <div className="">
+                      <span className="fs-3">{quantity} </span>
+                      in cart
+                    </div>
+                    <Button className="btn-outline-secondary" onClick={() => increaseCartQuantity(product.id)}>
+                      {" "}
+                      +{" "}
+                    </Button>
                   </div>
-                  <Button onClick={() => increaseCartQuantity(product.id)}> + </Button>
+                  <Button
+                    variant="danger"
+                    size="sm"
+                    onClick={() => removeFromCart(product.id)}
+                  >
+                    {" "}
+                    Remove
+                  </Button>
                 </div>
-                <Button variant="danger" size="sm" onClick={() => removeFromCart(product.id)}> Remove</Button>
-              </div>
+              )
+            ) : (
+              <Button className="w-100 btn-outline-secondary disabled"> Out of stock </Button>
             )}
+
             <div className="d-flex align-items-center flex-column">
-              <Button className="w-100" onClick={() => setPopupVisible(true)}>
+              <Button className="w-100 btn-outline-secondary" onClick={() => setPopupVisible(true)}>
                 Show more details
               </Button>
             </div>

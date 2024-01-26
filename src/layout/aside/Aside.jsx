@@ -12,7 +12,7 @@ const Aside = () => {
           Welcome to my cozy corner. Let's get to know each other. I'm Irina, a
           coffee lover passionate about baking, creating beautiful designs, food
           photography and crafting delicious treats.{" "}
-          <Link to={"/about"} id="readMore" target="_blank">
+          <Link to={"/about"} id="readMore">
             Read more...{" "}
           </Link>
         </p>
@@ -20,31 +20,53 @@ const Aside = () => {
         {/* Instagram post links */}
         <h6 id="insta_text">You Can Bake It! on INSTAGRAM</h6>
         <div className="insta_links">
-          <a id="insta_photo1" href="https://www.instagram.com/p/CLrUZpOpMvZ/">
+          <a
+            id="insta_photo1"
+            href="https://www.instagram.com/p/CLrUZpOpMvZ/"
+            target="_blank"
+          >
             link
           </a>
-          <a id="insta_photo2" href="https://www.instagram.com/p/CI8VAwxJ0_s/">
+          <a
+            id="insta_photo2"
+            href="https://www.instagram.com/p/CI8VAwxJ0_s/"
+            target="_blank"
+          >
             link
           </a>
-          <a id="insta_photo3" href="https://www.instagram.com/p/CLWiJwjpx2I/">
+          <a
+            id="insta_photo3"
+            href="https://www.instagram.com/p/CLWiJwjpx2I/"
+            target="_blank"
+          >
             link
           </a>
           <a
             id="insta_photo4"
             href="https://www.instagram.com/p/CMmYMrdpZx0/?img_index=1"
+            target="_blank"
           >
             link
           </a>
           <a
             id="insta_photo5"
             href="https://www.instagram.com/p/CLCdtnrJedb/?img_index=1"
+            target="_blank"
           >
             link
           </a>
-          <a id="insta_photo6" href="https://www.instagram.com/p/CI0hv-_pdh3/">
+          <a
+            id="insta_photo6"
+            href="https://www.instagram.com/p/CI0hv-_pdh3/"
+            target="_blank"
+          >
             link
           </a>
-          <a id="insta_photo7" href="https://www.instagram.com/p/CMCUv0YnlUn/">
+          <a
+            id="insta_photo7"
+            href="https://www.instagram.com/p/CMCUv0YnlUn/"
+            target="_blank"
+          >
             link
           </a>
         </div>

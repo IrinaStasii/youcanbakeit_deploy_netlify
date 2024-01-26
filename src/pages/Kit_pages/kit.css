@@ -102,6 +102,7 @@
 .btn-outline-secondary {
   background-color: white;
   margin-right: 5px;
+  border: 1px solid #55c6e4;
 }
 
 .btn.btn-outline-secondary:hover {
